@@ -18,3 +18,29 @@ Method 02. By changing Username and Password (Function -> MD5)
     Step 06. Visit www.yoursite.com/wp-admin and enter Email and Password
     Step 07. You will be successfully logged in into the wp-admin
     Enjoy, You have done this ☺️👌
+
+Method 03. By executing the SQL Queries (Creating New Admin User)
+
+   Step 01. Select your DB
+   Step 02. Paste this query:
+
+    INSERT INTO wp_users 
+    (user_login, user_pass, user_nicename, user_email, user_status) 
+    VALUES ('sk_admin', MD5('Admin@12345'), 'sk_admin', 'your@email.com', 0);
+
+   Step 03. Then Run:
+
+    INSERT INTO wp_usermeta (user_id, meta_key, meta_value)
+    SELECT ID, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'
+    FROM wp_users WHERE user_login = 'sk_admin';
+
+   Step 04. Then run:
+
+    INSERT INTO wp_usermeta (user_id, meta_key, meta_value)
+    SELECT ID, 'wp_user_level', '10'
+    FROM wp_users WHERE user_login = 'sk_admin';
+
+   Step 05. Login at the (www.yoursiteurl.com/wp-admin)
+   Step 06. Enter the new credential and login
+
+   Here you have successfully recovered you wp account ☺️👌
