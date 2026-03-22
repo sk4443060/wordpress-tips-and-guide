@@ -8,4 +8,5 @@
 
 03. Admin email update of the WP
 
+        https://github.com/sk4443060/wordpress-tips-and-guide/blob/main/wp-admin-email-change.md
         
