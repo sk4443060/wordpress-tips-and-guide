@@ -10,3 +10,6 @@
 
         https://github.com/sk4443060/wordpress-tips-and-guide/blob/main/wp-admin-email-change.md
         
+04. WP Admin Recovery using DB
+
+        https://github.com/sk4443060/wordpress-tips-and-guide/blob/main/wp-userid-and-password-recovery-fron-db.md
